@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/9ddcd1b5eb.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+           emailjs.init("user_QiGn4sxaqLLN1TD3vB6Jh");
+        })();
+    </script>
     <title>Jahanzeb Jabbar</title>
 </head>
 
@@ -272,9 +277,7 @@
 <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
-      (function () {
-        emailjs.init("user_m");
-      })();
+      
       const name = document.getElementById("feedback_name");
       const email = document.getElementById("feedback_email");
       const message = document.getElementById("feedback_message");
@@ -284,8 +287,8 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         emailjs
-          .send("service_9jvu0k9", "template_mb3eose", {
-            to_name: "Jahanzeb Jabbar",
+          .send("service_4f8ms9k", "template_pix3fbf", {
+            to_name: "From JahanzebJabbar.com",
             from_name: name.value,
             from_email: email.value,
             message: message.value,
@@ -294,9 +297,10 @@
             name.value = "";
             email.value = "";
             message.value = "";
+             console.log('SUCCESS!', 'Successfully sent');
           })
           .catch((e) => {
-            console.log("Error in sending message");
+            console.log('FAILED...', e);
             alert("Error in sending message try again later");
           });
       });
