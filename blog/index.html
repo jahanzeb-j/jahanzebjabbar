@@ -1,1 +1,182 @@
-<h1> ALL blogs here </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,900,700,300|Montserrat:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/9ddcd1b5eb.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+           emailjs.init("user_QiGn4sxaqLLN1TD3vB6Jh");
+        })();
+    </script>
+    <title>Jahanzeb Jabbar Blogs</title>
+</head>
+
+<body>
+    <div>
+        <a id="topbttn"></a>
+        <div class="main-section">
+           
+            <div class="header" id="main-area">
+                <ul>
+                    <li><a href="https://jahanzebjabbar.com">Home</a></li>
+                    <li><a href="#feedback">Contact</a></li>
+                    <li>
+                      <a href="https://jahanzeb-j.github.io" target="_blank">Web CV</a>
+                    </li>
+                    <li>
+                        <a href="https://jahanzeb-j.blogspot.com" target="_blank">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#blogs" >Blogs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="blog-img-overlay" ></div>
+            <div class="header-center text-center">
+                <div class="header-data-name">
+                    <span class="header-name ">Blogs</span>
+                </div>
+            </div>
+    
+        </div>
+        
+        <h1 class="heading-feedback">Blogs List</h1>
+        <div id="blogs" class="blog-list">
+            <div class="content text-center">
+                <div class="list">
+                    <!-- blog1 -->
+                    <div class="blog">
+                       <a href="./posts/blog-test.html">
+                        <h3>Top 10 tips for dev</h3>
+                        <p>Amazing tips to developers..</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <!-- blog 2 -->
+                    <div class="blog">
+                        <a href="./posts/blog-test.html">
+                         <h3>Top 10 tips for dev</h3>
+                         <p>Amazing tips to developers..</p>
+                         </a>
+                     </div>
+                     <hr>
+                </div>
+            </div>
+        </div>
+        
+
+        <h1 class="heading-feedback">Contact Me</h1>
+        <div id="feedback" class="feedback">
+            <div class="feedback-left">
+                <img src="../svgs/feed.svg" alt="" />
+            </div>
+            <div class="feedback-right">
+                <form action="" id="feedback_form">
+                    <div>
+                        <label for="name">Name <span style="color: rgb(214, 4, 4)">*</span></label
+              >
+              <br />
+              <input
+                id="feedback_name"
+                type="text"
+                name="name"
+                required
+                minlength="3"
+                maxlength="20"
+              />
+            </div>
+            <div>
+              <label for="name"
+                >Email <span style="color: rgb(214, 4, 4)">*</span></label
+              >
+              <br />
+              <input
+                id="feedback_email"
+                type="email"
+                name="email"
+                required
+                maxlength="50"
+              />
+            </div>
+            <div>
+              <label for="message"
+                >Message <span style="color: rgb(214, 4, 4)">*</span></label
+              >
+              <br />
+              <textarea
+                id="feedback_message"
+                type="text"
+                name="message"
+                cols="42"
+                rows="8"
+                required
+                minlength="5"
+                maxlength="200"
+              ></textarea>
+            </div>
+            <button type="submit" id="feedback_submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer">© 2021 - JahanzebJabbar.com</div>
+
+     
+    </div>
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+       const name = document.getElementById("feedback_name");
+      const email = document.getElementById("feedback_email");
+      const message = document.getElementById("feedback_message");
+      const submitButton = document.getElementById("feedback_submit");
+      const form = document.getElementById("feedback_form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        emailjs
+          .send("service_4f8ms9k", "template_pix3fbf", {
+            to_name: "From JahanzebJabbar.com",
+            from_name: name.value,
+            from_email: email.value,
+            message: message.value,
+          })
+          .then((res) => {
+            name.value = "";
+            email.value = "";
+            message.value = "";
+             console.log('SUCCESS!', 'Successfully sent');
+          })
+          .catch((e) => {
+            console.log('FAILED...', e);
+            alert("Error in sending message try again later");
+          });
+      });
+
+        
+      var btn = $('#topbttn');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+     
+    </script>
+   
+  </body>
+</html>
