@@ -2,17 +2,151 @@
 
 <head>
   <title>E-Card</title>
-
 </head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
 
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1) {
+  color: #e0ffff;
+}
+section:nth-child(2) {
+  color: #42455a;
+  background: #e0ffff;
+}
+section:nth-child(3) {
+  color: #e0ffff;
+}
+section:nth-child(4) {
+  color: #42455a;
+  background: #e0ffff;
+}
+section .container {
+  margin: 100px;
+}
+section h1 {
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .text-container {
+  display: flex;
+}
+section .text-container .text-box {
+  margin: 20px;
+  padding: 20px;
+  background: #00c2cb;
+}
+section .text-container .text-box h3 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container {
+    flex-direction: column;
+  }
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.fade-bottoma {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.fade-lefta {
+  animation: fade-left 1s ease-in;
+}
+.fade-righta {
+  animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+div {
+margin:1em;
+}
+.text{
+	color: #42455a;
+}
+.text h4{
+	margin-top:0.6em;
+}
+</style>
 <body>
   <!-- <h3>Wedding E-Card..</h3> -->
+   <div class="container text fade-bottoma">
   <h2>Invitation for Walima reception</h2>
-  <h2>Save the Date</h2>
-  <h4><a href="#"> Jan 22nd 2023 </a></h4>
+  <h4>Save the Date</h3>
+  <h2><a href="#"> Jan 22nd 2023 </a></h4>
+  </div>
 
-  <p>Location: Musarrat Banquet, Hyderabad</p>
-  <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+	<div>
+  <p class="fade-lefta" style="margin-top: 1.6em; margin-bottom: 0.9em;">
+	Location: <a target="_" href="https://www.google.com/maps/place/989W%2B9CG+Musarrat+Banquet,+Road,+Latifabad+Unit+2+Latifabad,+Hyderabad,+Sindh+71000,+Pakistan/@25.3684347,68.3460727,16z/data=!4m6!3m5!1s0x394c70632b0b9229:0xd60c63c16868a19c!8m2!3d25.3684347!4d68.3460727!16s%2Fg%2F119wby0g8">
+	Musarrat Banquet, Hyderabad</a></p> 
+  <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;
+  box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em;border-radius: 8px; will-change: transform;margin-bottom: 0.9em;">
     <div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;">
       <iframe style="height:100%;width:100%;border:0;" frameborder="0"
         src="https://www.google.com/maps/embed/v1/place?q=989W%2B9CG+Musarrat+Banquet,+Road,+Latifabad+Unit+2+Latifabad,+Hyderabad,+Sindh+71000,+Pakistan/@25.3684347,68.3460727,16z/data=!4m6!3m5!1s0x394c70632b0b9229:0xd60c63c16868a19c!8m2!3d25.3684347!4d68.3460727!16s%2Fg%2F119wby0g8&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
@@ -24,8 +158,9 @@
         background: none !important;
       }
     </style>
+	</div>
   </div>
-  <div>Card</div>
+  <div class="container reveal fade-left">Invitation Card</div>
   <div style="position: relative; width: 100%; height: 0; padding-top: 140.0000%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
  border-radius: 8px; will-change: transform;">
@@ -38,6 +173,25 @@
 </body>
 <script>
     // window.location.href = "https://www.paypal.com/paypalme/jahanzebjabbar";
+	function reveal() {
+	  var reveals = document.querySelectorAll(".reveal");
+
+	  for (var i = 0; i < reveals.length; i++) {
+		var windowHeight = window.innerHeight;
+		var elementTop = reveals[i].getBoundingClientRect().top;
+		var elementVisible = 150;
+
+		if (elementTop < windowHeight - elementVisible) {
+		  reveals[i].classList.add("active");
+		} else {
+		  reveals[i].classList.remove("active");
+		}
+	  }
+	}
+
+window.addEventListener("scroll", reveal);
+
+
 </script>
 
 </html>
