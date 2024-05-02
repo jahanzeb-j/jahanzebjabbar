@@ -5,16 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./img/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,900,700,300|Montserrat:300,400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,900,700,300|Montserrat:300,400,700"
+        rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <script src="https://kit.fontawesome.com/9ddcd1b5eb.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function() {
-           emailjs.init("user_QiGn4sxaqLLN1TD3vB6Jh");
+        (function () {
+            emailjs.init("user_QiGn4sxaqLLN1TD3vB6Jh");
         })();
     </script>
     <title>Jahanzeb Jabbar</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G_V7F0LT60YK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G_V7F0LT60YK');
+    </script>
 </head>
 
 <body>
@@ -26,19 +35,19 @@
             <div class="cube"></div>
             <div class="cube"></div>
             <div class="cube"></div>
-            
+
             <div class="header" id="main-area">
                 <ul>
                     <li><a href="#main-area">Home</a></li>
                     <li><a href="#feedback">Contact</a></li>
                     <li>
-                      <a href="https://jahanzeb-j.github.io" target="_blank">Web CV</a>
+                        <a href="https://jahanzeb-j.github.io" target="_blank">Web CV</a>
                     </li>
                     <li>
                         <a href="https://jahanzeb-j.blogspot.com" target="_blank">Portfolio</a>
                     </li>
                     <li>
-                        <a href="./blog" >Blogs</a>
+                        <a href="./blog">Blogs</a>
                     </li>
                 </ul>
             </div>
@@ -49,19 +58,21 @@
                     </div>
                     A<span class="header-job">"Full Stack Developer."</span>
                     <div class="header-icons">
-                       <a class="fab fa-twitter fa-2x" href="https://twitter.com/jahanzebjabbar" target="_blank"></a>
+                        <a class="fab fa-twitter fa-2x" href="https://twitter.com/jahanzebjabbar" target="_blank"></a>
                         <a class="fab fa-github fa-2x" href="https://github.com/jahanzeb-j" target="_blank"></a>
-                        <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/jahanzeb-jabbar/" target="_blank"></a>
-                        <a class="fab fa-instagram fa-2x" href="https://www.instagram.com/jahanzebjabbar1/" target="_blank"></a>
-                        <a class="far fa-envelope fa-2x" href="mailto:jahanzeb.jabbar@hotmail.com" target="_blank"></a> 
-                        <a class="fab fa-youtube fa-2x" href="https://youtube.com/c/JahanzebKVlogs" target="_blank"></a> 
+                        <a class="fab fa-linkedin fa-2x" href="https://www.linkedin.com/in/jahanzeb-jabbar/"
+                            target="_blank"></a>
+                        <a class="fab fa-instagram fa-2x" href="https://www.instagram.com/jahanzebjabbar1/"
+                            target="_blank"></a>
+                        <a class="far fa-envelope fa-2x" href="mailto:jahanzeb.jabbar@hotmail.com" target="_blank"></a>
+                        <a class="fab fa-youtube fa-2x" href="https://youtube.com/c/JahanzebKVlogs" target="_blank"></a>
                     </div>
                 </div>
                 <div class="header-right">
                     <img src="./svgs/feeling_proud.svg" alt="HEADER-ICON" />
                 </div>
             </div>
-            
+
         </div>
 
         <!-- <div id="about" class="about-section">
@@ -224,106 +235,80 @@
             <div class="feedback-right">
                 <form action="" id="feedback_form">
                     <div>
-                        <label for="name">Name <span style="color: rgb(214, 4, 4)">*</span></label
-              >
-              <br />
-              <input
-                id="feedback_name"
-                type="text"
-                name="name"
-                required
-                minlength="3"
-                maxlength="20"
-              />
+                        <label for="name">Name <span style="color: rgb(214, 4, 4)">*</span></label>
+                        <br />
+                        <input id="feedback_name" type="text" name="name" required minlength="3" maxlength="20" />
+                    </div>
+                    <div>
+                        <label for="name">Email <span style="color: rgb(214, 4, 4)">*</span></label>
+                        <br />
+                        <input id="feedback_email" type="email" name="email" required maxlength="50" />
+                    </div>
+                    <div>
+                        <label for="message">Message <span style="color: rgb(214, 4, 4)">*</span></label>
+                        <br />
+                        <textarea id="feedback_message" type="text" name="message" cols="42" rows="8" required
+                            minlength="5" maxlength="200"></textarea>
+                    </div>
+                    <button type="submit" id="feedback_submit">Submit</button>
+                </form>
             </div>
-            <div>
-              <label for="name"
-                >Email <span style="color: rgb(214, 4, 4)">*</span></label
-              >
-              <br />
-              <input
-                id="feedback_email"
-                type="email"
-                name="email"
-                required
-                maxlength="50"
-              />
-            </div>
-            <div>
-              <label for="message"
-                >Message <span style="color: rgb(214, 4, 4)">*</span></label
-              >
-              <br />
-              <textarea
-                id="feedback_message"
-                type="text"
-                name="message"
-                cols="42"
-                rows="8"
-                required
-                minlength="5"
-                maxlength="200"
-              ></textarea>
-            </div>
-            <button type="submit" id="feedback_submit">Submit</button>
-          </form>
         </div>
-      </div>
 
-      <div class="footer">© 2024 - JahanzebJabbar.com</div>
+        <div class="footer">© 2024 - JahanzebJabbar.com</div>
 
-     
+
     </div>
-<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
-      
-      const name = document.getElementById("feedback_name");
-      const email = document.getElementById("feedback_email");
-      const message = document.getElementById("feedback_message");
-      const submitButton = document.getElementById("feedback_submit");
-      const form = document.getElementById("feedback_form");
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        emailjs
-          .send("service_4f8ms9k", "template_pix3fbf", {
-            to_name: "From JahanzebJabbar.com",
-            from_name: name.value,
-            from_email: email.value,
-            message: message.value,
-          })
-          .then((res) => {
-            name.value = "";
-            email.value = "";
-            message.value = "";
-             console.log('SUCCESS!', 'Successfully sent');
-             alert("Successfully sent !!");
-          })
-          .catch((e) => {
-            console.log('FAILED...', e);
-            alert("Error in sending message try again later");
-          });
-      });
+        const name = document.getElementById("feedback_name");
+        const email = document.getElementById("feedback_email");
+        const message = document.getElementById("feedback_message");
+        const submitButton = document.getElementById("feedback_submit");
+        const form = document.getElementById("feedback_form");
 
-      console.log("Running...");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            emailjs
+                .send("service_4f8ms9k", "template_pix3fbf", {
+                    to_name: "From JahanzebJabbar.com",
+                    from_name: name.value,
+                    from_email: email.value,
+                    message: message.value,
+                })
+                .then((res) => {
+                    name.value = "";
+                    email.value = "";
+                    message.value = "";
+                    console.log('SUCCESS!', 'Successfully sent');
+                    alert("Successfully sent !!");
+                })
+                .catch((e) => {
+                    console.log('FAILED...', e);
+                    alert("Error in sending message try again later");
+                });
+        });
 
-      let data = [
-        `"JAVA Developer."`,
-        `"Python Developer."`,
-        `"Machine Learning Expert"`,
-        `"ReactJS Developer."`,
-      ];
-      let i = 0;
-      setInterval(() => {
-        let job = document.getElementsByClassName("header-job")[0];
-        job.innerHTML = data[i];
-        job.style.width = data[i].length;
-        i++;
-        if (i >= data.length) i = 0;
-      }, 3000);
+        console.log("Running...");
 
-      
+        let data = [
+            `"JAVA Developer."`,
+            `"Python Developer."`,
+            `"Machine Learning Expert"`,
+            `"ReactJS Developer."`,
+        ];
+        let i = 0;
+        setInterval(() => {
+            let job = document.getElementsByClassName("header-job")[0];
+            job.innerHTML = data[i];
+            job.style.width = data[i].length;
+            i++;
+            if (i >= data.length) i = 0;
+        }, 3000);
+
+
         var btn = $('#topbttn');
 
         $(window).scroll(function () {
@@ -339,6 +324,7 @@
             $('html, body').animate({ scrollTop: 0 }, '300');
         });
     </script>
-   
-  </body>
+
+</body>
+
 </html>
