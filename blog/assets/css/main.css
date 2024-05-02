@@ -145,6 +145,10 @@ hr {
   max-width: 80%;
 }
 
+.blog-body {
+    text-align: left;
+}
+
 @keyframes typewritter {
     from {
         width: 0ch;
@@ -1487,6 +1491,9 @@ background-color: #FF6600
     .feedback-right {
         margin-left: 15%;
     }
+    .blog-list .list {
+        margin: 0em 2em;
+    }
 }
 
 @media all and (max-width: 380px) {
@@ -1530,6 +1537,9 @@ background-color: #FF6600
     .header-icons .fab,
     .far {
         margin-left: 0.7rem;
+    }
+    .blog-list .list {
+        margin: 0em 3em;
     }
 }
 
@@ -1594,6 +1604,9 @@ background-color: #FF6600
   overflow: hidden;
   padding:0;
   margin:0px;
+}
+.main-section.volleyball {
+    background-image: url(../img/vl-image.png);
 }
 .cube {
   position: absolute;
