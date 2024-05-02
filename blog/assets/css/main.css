@@ -106,6 +106,10 @@ body {
     margin-left: 1%;
 }
 
+.header-para {
+    color: white;
+}
+
 .header-job {
     font-weight: bold;
     font-size: 2.4rem;
@@ -133,9 +137,9 @@ hr {
     color: #007acc;
 }
 
-.blog a {
+/* .blog a {
     text-decoration: none;
-}
+} */
 
 .blog a:hover {
     text-decoration: overline;
@@ -1607,7 +1611,9 @@ background-color: #FF6600
 }
 .main-section.volleyball {
     background-image: url(../img/vl-image.png);
+    height: 60vh;
 }
+
 .cube {
   position: absolute;
   top: 80vh;
