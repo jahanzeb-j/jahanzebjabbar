@@ -26,6 +26,10 @@ body {
     overflow-x: hidden;
 }
 
+p span {
+    font-size: 0.8rem;
+}
+
 .header {
     background: #2c343f29;
     position: relative;
@@ -108,6 +112,7 @@ body {
 
 .header-para {
     color: white;
+    font-size: 2rem;
 }
 
 .header-job {
@@ -134,7 +139,7 @@ hr {
 }
 
 .list .blog {
-    color: #007acc;
+    color: #212529;
 }
 
 /* .blog a {
@@ -1498,6 +1503,13 @@ background-color: #FF6600
     .blog-list .list {
         margin: 0em 2em;
     }
+    .header-name {
+        font-size: 3rem;
+    }
+    .header-para {
+        font-size: 2rem;
+    }
+    
 }
 
 @media all and (max-width: 380px) {
@@ -1611,7 +1623,7 @@ background-color: #FF6600
 }
 .main-section.volleyball {
     background-image: url(../img/vl-image.png);
-    height: 60vh;
+    height: 65vh;
 }
 
 .cube {
