@@ -1612,7 +1612,7 @@ background-color: #FF6600
 .main-section {
   background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
   background-image: url(../img/bg-index.jpg);
-  background-size: 120%;
+  background-size: cover;
   animation: Gradient 15s ease infinite;
   position: relative;
   height: 100vh;
