@@ -142,12 +142,12 @@ hr {
     color: #212529;
 }
 
-/* .blog a {
+.blog a {
     text-decoration: none;
-} */
+}
 
 .blog a:hover {
-    text-decoration: overline;
+    text-decoration: underline;
 }
 
 .blog img {
@@ -1623,6 +1623,11 @@ background-color: #FF6600
 }
 .main-section.volleyball {
     background-image: url(../img/vl-image.png);
+    height: 65vh;
+}
+
+.main-section.developers {
+    background-image: url(../img/developer-img.webp);
     height: 65vh;
 }
 
